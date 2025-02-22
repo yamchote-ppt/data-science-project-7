@@ -75,7 +75,7 @@ if __name__ == "__main__":
     df = pd.read_csv(CSV_FILE)
     json_object = json.loads(df['JSON'].iloc[0].replace('\'','"'))
     df['JSON'] = df['JSON'].apply(lambda x: json.loads(x.replace('\'','"')))
-    df['Timestamp'] = pd.to_datetime(df['Timestamp'])
+    df['LoadTime'] = pd.to_datetime(df['Timestamp'])
     df['geo'] = df['JSON'].apply(lambda x: x['city'].get('geo', np.nan))
     df['lat'] = df['geo'].apply(lambda x: x[0] if x is not np.nan else np.nan).astype(float)
     df['lon'] = df['geo'].apply(lambda x: x[1] if x is not np.nan else np.nan).astype(float)
@@ -98,6 +98,6 @@ if __name__ == "__main__":
     df['tz'] = df['tz'].apply(lambda x: re.match(r'\+([0-9])+:[0-9]{2}',x).group(1) if x is not np.nan else np.nan).astype(int)
     df['time'] = df['s'] + pd.to_timedelta(df['tz'], unit='h')
 
-    df = df[['Timestamp', 'City', 'name', 'lat', 'lon', 'co', 'dew', 'h', 'no2', 'o3', 'p', 'pm10', 'pm25', 'r', 'so2', 't', 'w', 'time']]
+    df = df[['LoadTime', 'City', 'name', 'lat', 'lon', 'co', 'dew', 'h', 'no2', 'o3', 'p', 'pm10', 'pm25', 'r', 'so2', 't', 'w', 'time']]
     df = df.drop_duplicates(subset=['City', 'name', 'lat', 'lon', 'co', 'dew', 'h', 'no2', 'o3', 'p', 'pm10', 'pm25', 'r', 'so2', 't', 'w', 'time'])
     df.to_csv('thai_air_data_cleaned.csv', index=False)
