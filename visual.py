@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-@st.cache_data
+# @st.cache_data
 def load_data():
     return pd.read_csv('thai_air_data_cleaned.csv')
 
