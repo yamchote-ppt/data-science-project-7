@@ -1,4 +1,4 @@
-LoadTime,City,name,lat,lon,co,dew,h,no2,o3,p,pm10,pm25,r,so2,t,w,time
+Timestamp,City,name,lat,lon,co,dew,h,no2,o3,p,pm10,pm25,r,so2,t,w,time
 2025-02-19 18:11:33,Samut Prakan,"City Hall, Samut Prakan, Thailand (ศาลากลางจังหวัดสมุทรปราการ)",13.599149,100.597345,0.1,-5.9,8.4,9.3,13.4,1008.5,55.0,110.0,0.6,0.6,31.7,0.5,2025-02-20 00:00:00
 2025-02-19 18:11:33,Nakhon Ratchasima,"Municipal Waste Water Pumping Station, Nakhon Ratchasima, Thailand (สถานีสูบน้ำเสีย เทศบาลนครราชสีมา)",14.979537,102.098335,,-4.6,9.2,11.0,23.7,985.9,,100.0,0.2,0.6,31.9,0.5,2025-02-20 00:00:00
 2025-02-19 18:11:34,Surin,"Pyramid House, Surin, Thailand",14.793612,103.43056,,-4.6,9.2,,,993.9,,,,,32.0,0.5,
