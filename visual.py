@@ -31,7 +31,7 @@ ax.set_xticklabels(correlation_matrix.columns, rotation=90)
 ax.set_yticklabels(correlation_matrix.columns)
 st.pyplot(fig)
 
-
+ 
 st.subheader('Scatter Matrix')
 selected_columns = st.multiselect('Select Columns for Scatter Matrix', columns, default=columns[3:])
 hue_scatter_matrix = st.selectbox('Select Hue for Scatter Matrix', columns, key='scatter_matrix_hue', index=columns.index('pm25'))
